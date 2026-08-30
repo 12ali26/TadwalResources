@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node (only build.js uses it; no dependencies, but just in case)
+node_modules/
+npm-debug.log*
+
+# Local dev servers
+.cache/

@@ -1,0 +1,23 @@
+# Netlify configuration for the Tadwal Resources static site.
+# The site is plain HTML/CSS/JS with no build step — Netlify just publishes the repo root.
+
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Serve the generated 404 page for unknown paths.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
