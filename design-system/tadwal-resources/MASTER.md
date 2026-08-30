@@ -85,6 +85,70 @@ energy) + warm sand neutrals (coastal, grounded). Per-division accent tints laye
 
 ---
 
+## Brand Mark — "Freight T"
+
+**Status:** Live (replaces the placeholder wave/dot mark, 2026-08-30).
+**Files:** `assets/img/logo.svg` (primary, uncontained), `assets/img/favicon.svg` (badge, contained).
+**Source:** Concept `1d` from the logo exploration, tuned to production as `2a` — crossbar and
+stem squared to a 4px grid, the counterweight block moved onto the stem baseline so it survives
+small sizes, plus a solid badge for the 16px favicon.
+
+### Concept
+
+A monogram fused with modular blocks. The **T** is built from four solid rectangles — one per
+distribution division (LPG, dairy, beverages, coatings) — connected into a single letterform.
+Heavier and squarer than the old mark, with no container: reads at distance on a tanker and cuts
+cleanly in vinyl for truck livery.
+
+### Construction
+
+Drawn on a `0 0 64 64` grid from four rectangles, `rx 1.5`:
+
+| Block | Rect | Fill |
+|---|---|---|
+| Crossbar | `x6 y12 w52 h13` | `#0A3D52` (primary) |
+| End block | `x45 y12 w13 h13` | `#F2A030` (accent) |
+| Stem | `x26 y25 w12 h35` | `#0A3D52` (primary) |
+| Counterweight | `x10 y47 w13 h13` | `#12879B` (secondary) |
+
+### Variants
+
+- **Primary — full colour** (`assets/img/logo.svg`, header): rects as above, on sand/white.
+- **Reversed** (site footer, dark panels, truck livery): crossbar + stem → `#FFFFFF`; end block
+  stays `#F2A030`; counterweight stays `#12879B`.
+- **One colour** (stamp, fax, engraving): crossbar + stem → `#0E1A24`; end block → `#0E1A24` at
+  55% opacity; counterweight → `#0E1A24` at 30% opacity.
+- **Badge** (`assets/img/favicon.svg`, app icon, avatar, uniform patch): `#0A3D52` rounded-square
+  container (`rx 14`) with the crossbar/stem in white and the end block in amber — built for
+  legibility at 16–32px where the uncontained mark's counterweight would merge into the stem.
+
+### Clear space & minimum sizes
+
+- Clear space: one crossbar height (13 units) on all sides.
+- 32 / 24px: use the primary uncontained mark.
+- Below 20px (favicon, browser tab, app icon): switch to the badge variant — the counterweight
+  block merges into the stem below that size on the uncontained mark.
+
+### Lockups
+
+- **Horizontal** (site header, current use): mark + `Tadwal` `Resources` (Space Grotesk 700 /
+  500, "Resources" in `#0B6576`). "Ltd" is dropped in the header/nav per brand decision — full
+  legal name (`Tadwal Resources Ltd`) is reserved for letterhead, invoices and legal contexts.
+- **Stacked** (signage, livery, letterhead): mark above `TADWAL` `RESOURCES` (uppercase, tight
+  tracking) with `LTD · MOMBASA` beneath in wide-tracked small caps.
+
+### Applications
+
+- **Site header/footer:** 38px mark, horizontal lockup, "Ltd" dropped — see `src/layout.html`.
+- **Favicon:** badge variant at 32px viewBox, `assets/img/favicon.svg`.
+- **Truck panel / gate signage / uniform patch:** reversed lockup on `#0A3D52`, stacked with the
+  division descriptor line (`LPG · DAIRY · BEVERAGES · COATINGS`).
+- **Invoices / letterhead:** horizontal lockup with full legal name, one-colour or full-colour.
+- **Stickers / merch:** badge variant, circular die-cut also works using the primary rects
+  centred in a solid circle.
+
+---
+
 ## Component Specs
 
 ### Buttons
