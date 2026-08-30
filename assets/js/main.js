@@ -67,6 +67,13 @@
     window.addEventListener("resize", function () {
       if (window.innerWidth > 960) setOpen(false);
     });
+
+    // Close when tapping outside the open panel.
+    document.addEventListener("click", function (e) {
+      if (toggle.getAttribute("aria-expanded") !== "true") return;
+      if (e.target.closest("#primary-nav") || e.target.closest(".nav-toggle")) return;
+      setOpen(false);
+    });
   }
 
   /* ---------- Dropdown menus (click + keyboard) ---------- */
